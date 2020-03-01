@@ -1,0 +1,292 @@
+@import './variables.scss';
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: $gray-beige;
+    header{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        min-height: 100%;
+        background-image: linear-gradient(to right, $gray-beige 70%, $rose-wine 30%);       
+        grid-template-areas: 
+        'h1 h1'
+        'p image';
+        @media (max-width: 800px) {
+            grid-template-areas: 'h1' 'image' 'p';
+            grid-template-columns: 100%;
+        }
+        @media (max-width: 600px) {
+            background-image: linear-gradient(to bottom, $gray-beige 70%, $rose-wine 30%);       
+            text-align: center;
+        }
+    h1{
+        grid-area: h1;
+        letter-spacing: 3px;
+        font-size: 60px;
+        margin-right: 40%;
+        text-align: center;
+        padding-top: 30px;
+        
+        color: $wine;
+        @media (max-width: 1080px) {
+            font-size: 40px;
+            padding-left: 5%;
+        }
+        @media (max-width: 600px) {
+            font-size: 25px;
+            margin-right: 0;
+            padding-top: 15px;
+        }
+        
+    }
+    p{
+        grid-area: p;
+        padding: 10%;
+        font-size: 20px;
+        @media (max-width: 1080px) {
+            font-size: 17px;
+        }
+        @media (max-width: 800px) {
+            width: 60%;
+            padding: 5%;
+        }
+        @media (max-width: 600px) {
+            font-size: 15px;
+            width: 90%;
+            color: white;
+        }
+    }
+    .image {
+        grid-area: image;
+        width: 60%;
+        text-align: center;
+        padding-bottom: 20px;
+        @media (max-width: 800px) {
+            padding: 20px;
+        }
+        @media (max-width: 600px) {
+            padding:2%;
+            width: 90vw;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        img{
+            height: 330px;
+            width: auto;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            @media (max-width: 1080px) {
+                height: 250px;
+                width: auto;
+            }
+            @media (max-width: 600px) {
+                width: 90vw;
+                height: auto;
+            }
+        }
+    }
+    }
+    main{
+        .advantages{
+           min-height: 100%; 
+        }
+        .details{
+            min-height: 100%;
+            background-color: $rose-wine;
+            color: white;
+            ol{
+                text-decoration: none;
+                list-style: none;
+                margin:0;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                li{
+                    i{
+                        &.my-icon{
+                            font-size: 80px;
+                        }
+                    }
+                    width: 25%;
+                    padding: 4%;
+                    @media (max-width: 800px) {
+                        width:42%;
+                    }
+                    @media (max-width: 600px) {
+                        width: 90%;
+                    }
+                }
+            }
+            .button{
+                padding: 10px;
+                margin-left: 4%;
+                a{
+                    display: block;
+                    text-decoration: none;
+                    &.file{
+                        background-color: $rose;
+                        border: none;
+                        border-radius: 10px;
+                        width: 450px;
+                        padding: 10px;
+                        color: white;
+                        font-size: 17px;
+                        letter-spacing: 1.5px;
+                        &:hover{
+                            cursor: pointer;
+                            background-color: lighten($color: $rose, $amount: 10%);
+                        }
+                        @media (max-width: 600px) {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+        .form{
+            min-height: 100%;
+            color: white;
+            padding-top: 50px;
+            form{
+                border-radius: 10px;
+                margin-right: auto;
+                margin-left: auto;
+                width: 680px;
+                padding: 40px;
+                background-color: $wine;
+                @media (max-width: 800px) {
+                    width:80%;
+                }
+                h3{
+                    color: white;
+                    letter-spacing: 2px;
+                    font-size: 30px;
+                    @media (max-width: 600px) {
+                        font-size: 25px;
+                    }
+                }
+                .input-div{
+                    label{
+                        width: 200px;
+                        display: block;
+                        padding: 10px 0 10px 0;
+                        @media (max-width: 600px) {
+                            width: 80%;
+                        }
+                    }
+                    input{
+                        border: none;
+                        border-radius: 10px;
+                        width: 300px;
+                        padding: 10px;
+                        &:focus{
+                            outline: none;
+                        }
+                        @media (max-width: 600px) {
+                            width: 100%;
+                        }
+                    }
+                }
+                button{
+                    padding: 20px;
+                    background-color: $rose;
+                    border: none;
+                    border-radius: 10px;
+                    display: block;
+                    margin: 40px auto 30px;
+                    color: white;
+                    width: 300px;
+                    text-align: center;
+                    font-size: 20px;
+                    letter-spacing: 1.5px;
+                    @media (max-width: 600px) {
+                        width: 80%;
+                        margin: 5%;
+                    }
+                    &:hover{
+                            cursor: pointer;
+                            background-color: lighten($color: $rose, $amount: 10%);
+                        }
+                }
+            }
+            
+        }
+        border-top: 5px solid $rose-wine;
+        
+        h1{
+            text-align: center;
+            font-size: 50px;
+            color: $rose;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 30px;
+            @media (max-width: 1080px) {
+                font-size: 35px;
+            }
+            @media (max-width: 600px) {
+                font-size: 25px;
+            }
+        }
+        h2{
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 30px;
+            @media (max-width: 1080px) {
+                font-size: 35px;
+            }
+            @media (max-width: 600px) {
+                font-size: 25px;
+            }
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            li{
+                margin: 2%;
+                padding: 1%;
+                background-color: white;
+                box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                display: block;
+                height: 300px;
+                width: 27%;
+                text-align: center;
+                @media (max-width: 800px) {
+                    width: 44%;
+                }
+                @media (max-width: 600px) {
+                    width: 94%;
+                }
+                img{
+                    width: 96%;
+                    height: auto;
+                }
+                p{
+                    color: $rose;
+                    font-weight: 900;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+            
+                }
+            }
+        }
+    }
+    .rose-text{
+            color: $rose-wine;
+            text-transform: uppercase;
+            @media (max-width:600px) {
+                color: $rose;
+            }
+        }
+    .clickable{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
