@@ -142,6 +142,13 @@ body main .advantages {
   min-height: 100%;
 }
 
+body main .video {
+  min-height: 100%;
+  text-align: center;
+  border-top: 7px solid #9A1750;
+  padding-bottom: 50px;
+}
+
 body main .details {
   min-height: 100%;
   background-color: #9A1750;

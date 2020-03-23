@@ -90,6 +90,12 @@ body{
         .advantages{
            min-height: 100%; 
         }
+        .video{
+            min-height: 100%; 
+           text-align: center;
+           border-top: 7px solid $rose-wine;
+           padding-bottom: 50px;
+        }
         .details{
             min-height: 100%;
             background-color: $rose-wine;
